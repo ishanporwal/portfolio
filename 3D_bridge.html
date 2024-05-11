@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Porwal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf050f52ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/name.png" class = "logo" style="width: 20%; height: auto;">
+            <ul id="sidemenu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div id="project">
+            <h1>3D Printed Bridge</h1>
+            <h2 align="center"><i>Sept. 2021 - Nov. 2021</i></h2>
+            <p>
+                I was selected to represent my high school in the NJIT 3D Printed Bridge Competition. 
+                The goal of the competition was to design an aesthetically-pleasing, lightweight, and stiff bridge that
+                will take the least amount of print time and assembly time.
+            <p align="center"><img src="images/3D_bridge/dimensions.png" alt="Dimensions" style="width: 50%; height: auto;"><br><br><i>Different views
+                of designed bridge
+            </i></p><br><br>
+            Throughout our research and iterative design process, we made several decisions. We created sections for even load distribution to avoid
+            vulnerable fault lines and reduce support material. We also decided to use tenon and mortise joints that were inspired by woodworking to lower human error.
+            Finally, we decided to have filleted edges and corners for additional support and to decrease stress concentration. <br><br>
+
+            We also performed force calculations with our design using method of sections and finding forces in the center X truss using equilibrium equations. We 
+            determined load distribution by calculating zero force members then solving. <br><br>
+            We presented our bridge and design to a panel of professional engineering judges and won first place in multiple categories. <br><br>
+            Click <a href="https://docs.google.com/presentation/d/1HH08C0Qr3q-yx8OPkuzVB5FvB6S_AuJvNKFMyXLouAw/edit?usp=sharing">here</a> for a slideshow presentation on the project. 
+            </p>
+        </div>           
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

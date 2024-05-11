@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Porwal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf050f52ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/name.png" class="logo" style="width: 20%; height: auto;">
+            <ul id="sidemenu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>           
+    </div>
+</div>
+
+<!-- ------------portfolio-------------- -->
+<div id="portfolio2">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <!-- Personal Portfolio -->
+            <div class="work">
+                <img src="images/portfolio_project/background.png">
+                <div class="layer">
+                    <h3>Personal Portfolio</h3>
+                    <p>Created the personal portfolio you're currently on using HTML, CSS, and JS.</p>
+                    <a href="portfolio_project.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!-- Tennis Pong -->
+            <div class="work">
+                <img src="images/tennis_pong/background.png">
+                <div class="layer">
+                    <h3>Tennis Pong</h3>
+                    <p>This project is modeled after the classic arcade game, except with 
+                        visualizations representing a tennis match instead.</p>
+                    <a href="tennis_pong.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!-- Cooling Control Module -->
+            <div class="work">
+                <img src="images/cooling_board/background.png">
+                <div class="layer">
+                    <h3>Cooling Control Module</h3>
+                    <p>Developed PCB control system for cooling systems on MKVII, Olin's seventh 
+                        FSAE electric race car, including radiator fan and water pump control 
+                        functionalities.</p>
+                    <a href="cooling_board.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="work-list">
+            <!-- MIC Engineering Wikipedia Analysis -->
+            <div class="work">
+                <img src="images/mic/background.png">
+                <div class="layer">
+                    <h3>MIC Engineering Wikipedia Analysis</h3>
+                    <p>This project's goal was to find out how prevalent keywords 
+                        related to the military-industrial complex are in Wikipedia 
+                        pages related to different engineering disciplines.</p>
+                    <a href="mic.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!-- Warebot -->
+            <div class="work">
+                <img src="images/warebot/background.png">
+                <div class="layer">
+                    <h3>Warebot</h3>
+                    <p>Led a team in developing WareBot, a small-scale, automated forklift system aimed to improve 
+                        warehouse efficiency and safety, incorporating programmable movement to mitigate occupational injuries.
+                    </p>
+                    <a href="warebot.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!-- 3D Printed Bridge -->
+            <div class="work">
+                <img src="images/3D_bridge/bridge.png">
+                <div class="layer">
+                    <h3>3D Printed Bridge</h3>
+                    <p>Designed and engineered a K-Truss bridge for the NJIT 3D Printed Bridge Competition, 
+                        achieving first place in multiple categories, while prioritizing load capacity optimization.
+                    </p>
+                    <a href="3D_bridge.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------contact-------------------- -->
+<div id="contact">
+    <div class="copyright">
+        <p>© Ishan Porwal. 2024-Present. All rights reserved.</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

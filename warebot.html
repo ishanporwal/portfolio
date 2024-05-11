@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Porwal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf050f52ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/name.png" class = "logo" style="width: 20%; height: auto;">
+            <ul id="sidemenu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div id="project">
+            <h1>Warebot</h1>
+            <h2 align="center"><i>Dec. 2022 - June 2023</i></h2>
+            <p>
+                For my Edison Academy Magnet School capstone project, I led a team of 4 other students, Rithvik Mattipalli, Ayush Mandal, and Timothy Bess,
+                in addressing the lack of automation in warehouses and occupational injuries due to forklift accidents based on prior personal research 
+                that was presented to the former US Assistant Secretary of Labor.
+            <p align="center"><img src="images/warebot/warebot.png" alt="Warebot" style="width: 25%; height: auto;"><br><br><i>The Warebot
+            </i></p><br><br>
+            We essentially created a small-scale automated forklift that brings pallet of goods to desired destination and has ability to return 
+            it to original location. We included programmable movement, prong rotation, and linear slide lift using Raspberry Pi, Arduino Mega, as well as motor controllers 
+            in order to complete our project. <br><br>
+            Upon completion, we presented the Warebot to members of the Middlesex County Magnet Schools community. <br><br>
+            Click <a href="https://www.canva.com/design/DAFps1P5l50/elVbmHByqkrgJV3lyxLoPw/view?utm_content=DAFps1P5l50&utm_campaign=designshare&utm_medium=link&utm_source=editor">here</a> for a slideshow presentation on the project. 
+            </p>
+        </div>           
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

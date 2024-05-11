@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Porwal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf050f52ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/name.png" class = "logo">
+            <ul id="sidemenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>           
+    </div>
+</div>
+<!-- --------------about--------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>
+                <p class="desc">Hello! My name is Ishan Porwal and I'm an electrical and computer engineering 
+                    student at the Olin College of Engineering. I'm very interested in the intersection between 
+                    data science and hardware engineering whether that be through sensing technologies, IoT 
+                    applications, or integrating algorithms with physical hardware in robotics. I'm currently 
+                    working on improving my technical skills in those areas both inside and outside of my classes. 
+                    Apart from this, you can find me on the tennis court, playing the piano, or watching movies.
+                </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id = "skills">
+                        <ul>
+                            <li><span><u>Engineering Design</u></span><br>KiCad, Ignition, Solidworks, AutoCAD<br></li>
+                            <li><span><u>Programming</u></span><br>Python, R, SQL, MATLAB, Arduino, HTML, CSS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <div class="experience-column">
+                            <ul>
+                                <li><span><u>May 2024 - Aug. 2024</u></span><br>TTM Technologies<br><i>Automation Engineering Intern</i></li>
+                                <li><span><u>Sept. 2023 - Present</u></span><br>Olin Formula SAE Electric<br><i>Sensing Subteam Lead</i></li>
+                            </ul>
+                        </div>
+                        <div class="experience-column">
+                            <ul>
+                                <li><span><u>Sept. 2023 - Present</u></span><br>Olin Rocketry<br><i>Electrical Engineer</i></li>
+                                <li><span><u>July 2022 - April 2023</u></span><br>SwingVision, Inc.<br><i>Data Labeling & Analyst Intern</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-contents" id = "education">
+                        <ul>
+                            <li><span><u>2023-2027</u></span><br>Franklin W. Olin College of Engineering<br><i>B.S. Electrical and Computer Engineering</i></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------portfolio-------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <!-- Personal Portfolio -->
+            <div class="work">
+                <img src="images/portfolio_project/background.png">
+                <div class="layer">
+                    <h3>Personal Portfolio</h3>
+                    <p>Created the personal portfolio you're currently on using HTML, CSS, and JS.</p>
+                    <a href="portfolio_project.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!-- Tennis Pong -->
+            <div class="work">
+                <img src="images/tennis_pong/background.png">
+                <div class="layer">
+                    <h3>Tennis Pong</h3>
+                    <p>This project is modeled after the classic arcade game, except with 
+                        visualizations representing a tennis match instead.</p>
+                    <a href="tennis_pong.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!-- Cooling Control Module -->
+            <div class="work">
+                <img src="images/cooling_board/background.png">
+                <div class="layer">
+                    <h3>Cooling Control Module</h3>
+                    <p>Developed PCB control system for cooling systems on MKVII, Olin’s seventh 
+                        FSAE electric race car, including radiator fan and water pump control 
+                        functionalities.</p>
+                    <a href="cooling_board.html"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="portfolio.html" class="btn">See more</a>
+    </div>
+</div>
+<!-- ------------------------contact-------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>ishanporwal2027@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>732-354-9936</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Ishan_Porwal_Resume.pdf" class="btn btn2">Open Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn3">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© Ishan Porwal. 2024-Present. All rights reserved.</p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzv6QRozrKnhBQeKh2pq2luk7kv7zmZzhtCzIfSItmYVTthvI3Bs54CL1fgtLwLy3xA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Thank you for your message!"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
